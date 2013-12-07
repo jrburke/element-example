@@ -1,3 +1,7 @@
+This is an example project for the [element](https://github.com/jrburke/element) AMD loader plugin.
+
+## Project layout
+
 This web project has the following setup:
 
 * www/ - the web assets for the project
