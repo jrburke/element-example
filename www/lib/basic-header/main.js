@@ -1,16 +1,15 @@
 /*jshint browser: true */
 /*global define */
-define(function(require, exports, module) {
+define(function(require) {
+  // Return an array of objects that are all mixed in to the
+  // final custom element prototype.
   return [
-    // mixins to do some data-prop and data-event wiring
-    require('selectors/data-prop'),
-    require('selectors/data-event'),
+    // mixins for base functionality, and an HTML-based template.
+    require('./base'),
+    require('template!./template.html'),
 
     // Main prototype implementation
     {
-      // The HTML template to use for this element.
-      template: require('template!./template.html'),
-
       // Extra setup work to do once element is created.
       createdCallback: function () {
         this.setItalicContent();
